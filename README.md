@@ -4,6 +4,4 @@ A progress tracker that predicts student performance would help rectify the divi
 
 ## Demo 
 
-<video width="320" height="240" controls>
-  <source src="./assets/demo_video.mp4" type="video/mp4">
-</video>
+![demo_video](https://user-images.githubusercontent.com/66560251/131371255-4b55322e-9c98-48e4-978d-32b07bb8d237.gif)
