@@ -15,7 +15,7 @@ st.title("Student Tracker")
 
 grade_name = st.sidebar.selectbox("Select grade",("4","5","6","7","8","9","10"))
 roll_no = st.sidebar.slider("Select Roll No",1,120)
-df=pd.read_csv('')
+df=pd.read_csv('assets/Dataset/xAPI-Edu-Data.csv')
 
 
 X = df.drop(columns='Class')
