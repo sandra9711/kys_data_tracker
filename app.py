@@ -11,7 +11,14 @@ import numpy as np
 import os 
 import pandas as pd
 
+st.set_page_config(
+    page_title="Student Progress Tracker",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 st.title("Student Tracker")
+st.image("assets\img_kys.png", width=300)
 
 grade_name = st.sidebar.selectbox("Select grade",("4","5","6","7","8","9","10"))
 roll_no = st.sidebar.slider("Select Roll No",1,120)
@@ -32,11 +39,14 @@ predictions = model.predict(test_X)
 
 def predict_progress(grade_name,j):
   j = roll_no
+  st.write("## THE DATA BEING USED")
   Xs = X
   grade='GradeID_G-0'+str(grade_name)
   Xs.loc[Xs[grade] == 1]
   ip=Xs[j-1:j]
   l=""
+  st.write("## CHOSEN WEIGHTINGS: ")
+  ip
   op=model.predict(ip)
   op_list = op.tolist()
   if(op_list[0]=='M'):
@@ -60,6 +70,7 @@ def predict_progress(grade_name,j):
       r3="Not viewing class announcements regularly"
       rs3=", {} " .format(r3)
       l=l+rs3
+      st.write("## PREDICTION OUTPUT: ")
   return l
 
-st.write(predict_progress(grade_name,roll_no))
+st.header(predict_progress(grade_name,roll_no))
