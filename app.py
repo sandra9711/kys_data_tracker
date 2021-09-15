@@ -1,6 +1,6 @@
 import streamlit as st
 
-from sklearn.preprocessing import StandardScaler
+
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.neural_network import MLPClassifier
@@ -17,6 +17,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+#https://share.streamlit.io/sandra9711/kys_data_tracker/app.py
 st.title("Student Tracker")
 st.image("assets\img_kys.png", width=300)
 
