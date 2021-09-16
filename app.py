@@ -14,7 +14,7 @@ st.set_page_config(
 )
 #https://share.streamlit.io/sandra9711/kys_data_tracker/app.py
 st.title("Student Tracker")
-st.image("assets\img_kys.png", width=300)
+
 
 grade_name = st.sidebar.selectbox("Select grade",("4","5","6","7","8","9","10"))
 roll_no = st.sidebar.slider("Select Roll No",1,120)
