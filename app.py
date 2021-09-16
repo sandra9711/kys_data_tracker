@@ -1,14 +1,9 @@
 import streamlit as st
 
-
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score
-
-import matplotlib.pyplot as plt
-import numpy as np
-import os 
+ 
 import pandas as pd
 
 st.set_page_config(
